@@ -28,7 +28,8 @@ const rollupConfig = {
     peerDepsExternal(),
     json(),
     resolve(),
-    commonjs({transformMixedEsModules: true}),
+    // uses dynamic require to run user's javascript to HTML
+    commonjs({transformMixedEsModules: true, ignoreDynamicRequires: true}),
     babel({
       exclude: "node_modules/**",
       babelHelpers: "bundled"
