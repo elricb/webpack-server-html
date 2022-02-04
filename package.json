@@ -51,6 +51,5 @@
   },
   "peerDependencies": {
     "webpack": ">=4"
-  },
-  "dependencies": {}
+  }
 }
