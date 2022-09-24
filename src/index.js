@@ -28,6 +28,8 @@ class WebpackServerRender {
       );
     }
 
+    // https://webpack.js.org/api/compilation-hooks/
+    // Do changes to assets earlier, e. g. in Compilation.hooks.processAssets.
     compiler.hooks.emit.tapAsync(NAME, (compilation, callback) => {
       const entryFiles = getEntryFiles(getUri(compilation), compilation);
 
